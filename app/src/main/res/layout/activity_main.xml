@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -45,6 +46,15 @@
     <TextView
         android:id="@+id/tvDisplay"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        tools:text="2 + 3 ="
+        android:paddingHorizontal="20dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
         android:gravity="end|center_vertical"
@@ -72,8 +82,8 @@
         >
         <Button android:text="%" style="@style/btnDark" />
         <Button android:text="CE" style="@style/btnDark" />
-        <Button android:text="C" style="@style/btnDark" />
-        <Button android:text="⌫" style="@style/btnDark" />
+        <Button android:text="C" android:id="@+id/clear" style="@style/btnDark" />
+        <Button android:text="⌫" android:id="@+id/backspace" style="@style/btnDark" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,25 +92,25 @@
         <Button android:text="1/x" style="@style/btnDark" />
         <Button android:text="x²" style="@style/btnDark" />
         <Button android:text="²√x" style="@style/btnDark" />
-        <Button android:text="÷" style="@style/btnDark"/>
+        <Button android:text="÷" android:id="@+id/divide" style="@style/btnDark"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <Button android:text="7" style="@style/btnLight" />
-        <Button android:text="8" style="@style/btnLight" />
-        <Button android:text="9" style="@style/btnLight" />
-        <Button android:text="×" style="@style/btnDark"/>
+        <Button android:text="7" android:id="@+id/num7" style="@style/btnLight" />
+        <Button android:text="8" android:id="@+id/num8" style="@style/btnLight" />
+        <Button android:text="9" android:id="@+id/num9" style="@style/btnLight" />
+        <Button android:text="×" android:id="@+id/multiply" style="@style/btnDark"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <Button android:text="4" style="@style/btnLight" />
-        <Button android:text="5" style="@style/btnLight" />
-        <Button android:text="6" style="@style/btnLight" />
-        <Button android:text="-" style="@style/btnDark" />
+        <Button android:text="4" android:id="@+id/num4" style="@style/btnLight" />
+        <Button android:text="5" android:id="@+id/num5" style="@style/btnLight" />
+        <Button android:text="6" android:id="@+id/num6" style="@style/btnLight" />
+        <Button android:text="-" android:id="@+id/minus" style="@style/btnDark" />
 
     </LinearLayout>
     <LinearLayout
@@ -109,10 +119,10 @@
         >
 
 
-        <Button android:text="1" style="@style/btnLight" />
-        <Button android:text="2" style="@style/btnLight" />
-        <Button android:text="3" style="@style/btnLight" />
-        <Button android:text="+" style="@style/btnDark" />
+        <Button android:text="1" android:id="@+id/num1" style="@style/btnLight" />
+        <Button android:text="2" android:id="@+id/num2" style="@style/btnLight" />
+        <Button android:text="3" android:id="@+id/num3" style="@style/btnLight" />
+        <Button android:text="+" android:id="@+id/plus" style="@style/btnDark" />
 
     </LinearLayout>
     <LinearLayout
@@ -122,9 +132,9 @@
 
         <!-- Bottom Row -->
         <Button android:text="+/-" style="@style/btnLight" />
-        <Button android:text="0" style="@style/btnLight" />
+        <Button android:text="0" android:id="@+id/num0" style="@style/btnLight" />
         <Button android:text="." style="@style/btnLight" />
-        <Button android:text="=" style="@style/btnBlue" />
+        <Button android:text="=" android:id="@+id/equal" style="@style/btnBlue" />
     </LinearLayout>
 
 
