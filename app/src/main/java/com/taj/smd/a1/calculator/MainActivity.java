@@ -36,8 +36,10 @@ public class MainActivity extends AppCompatActivity
         operator = op;
         if (PreviousNumber == 0)
             PreviousNumber = number;
+
         number = 0;
         tvDisplay.setText(PreviousNumber + " " + operator);
+        tvResult.setText("0");
     }
 
     void handleEqualClick()
@@ -98,6 +100,48 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.minus).setOnClickListener(v -> setOperator("-"));
         findViewById(R.id.multiply).setOnClickListener(v -> setOperator("*"));
         findViewById(R.id.divide).setOnClickListener(v -> setOperator("/"));
+
+        // Set onClickListener for Advanced buttons
+        findViewById(R.id.square).setOnClickListener(v -> {
+            if (number != 0)
+            {
+                number *= number;
+                tvResult.setText(String.valueOf(number));
+            }
+        });
+
+        findViewById(R.id.sqrt).setOnClickListener(v -> {
+            if (number != 0)
+            {
+                number = (int) Math.sqrt(number);
+                tvResult.setText(String.valueOf(number));
+            }
+        });
+
+        findViewById(R.id.percent).setOnClickListener(v -> {
+            if (number != 0)
+            {
+                number = PreviousNumber * number / 100;
+                tvResult.setText(String.valueOf(number));
+            }
+        });
+
+        findViewById(R.id.negate).setOnClickListener(v -> {
+            if (number != 0)
+            {
+                number = -number;
+                tvResult.setText(String.valueOf(number));
+            }
+        });
+
+        // TODO: Implement Floating Point
+        findViewById(R.id.inverse).setOnClickListener(v -> {
+            if (number != 0)
+            {
+                number = 1 / number;
+                tvResult.setText(String.valueOf(number));
+            }
+        });
 
         // Set onClickListener for clear button
         findViewById(R.id.clear).setOnClickListener(v -> {

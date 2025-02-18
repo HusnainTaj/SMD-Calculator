@@ -80,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <Button android:text="%" style="@style/btnDark" />
+        <Button android:text="%" android:id="@+id/percent" style="@style/btnDark" />
         <Button android:text="CE" style="@style/btnDark" />
         <Button android:text="C" android:id="@+id/clear" style="@style/btnDark" />
         <Button android:text="⌫" android:id="@+id/backspace" style="@style/btnDark" />
@@ -89,9 +89,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <Button android:text="1/x" style="@style/btnDark" />
-        <Button android:text="x²" style="@style/btnDark" />
-        <Button android:text="²√x" style="@style/btnDark" />
+        <Button android:text="1/x" android:id="@+id/inverse" style="@style/btnDark" />
+        <Button android:text="x²" android:id="@+id/square" style="@style/btnDark" />
+        <Button android:text="²√x" android:id="@+id/sqrt" style="@style/btnDark" />
         <Button android:text="÷" android:id="@+id/divide" style="@style/btnDark"/>
     </LinearLayout>
     <LinearLayout
@@ -131,7 +131,7 @@
         >
 
         <!-- Bottom Row -->
-        <Button android:text="+/-" style="@style/btnLight" />
+        <Button android:text="+/-" android:id="@+id/negate" style="@style/btnLight" />
         <Button android:text="0" android:id="@+id/num0" style="@style/btnLight" />
         <Button android:text="." style="@style/btnLight" />
         <Button android:text="=" android:id="@+id/equal" style="@style/btnBlue" />
