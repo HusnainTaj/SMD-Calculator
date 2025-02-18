@@ -61,7 +61,10 @@
         android:padding="20dp"
         android:text="0"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeMaxTextSize="60sp"
+        android:autoSizeMinTextSize="20sp"
         android:textStyle="bold"  />
 
 
@@ -81,7 +84,7 @@
         android:layout_height="wrap_content"
         >
         <Button android:text="%" android:id="@+id/percent" style="@style/btnDark" />
-        <Button android:text="CE" style="@style/btnDark" />
+        <Button android:text="CE" android:id="@+id/clearEntry" style="@style/btnDark" />
         <Button android:text="C" android:id="@+id/clear" style="@style/btnDark" />
         <Button android:text="⌫" android:id="@+id/backspace" style="@style/btnDark" />
     </LinearLayout>
@@ -133,7 +136,7 @@
         <!-- Bottom Row -->
         <Button android:text="+/-" android:id="@+id/negate" style="@style/btnLight" />
         <Button android:text="0" android:id="@+id/num0" style="@style/btnLight" />
-        <Button android:text="." style="@style/btnLight" />
+        <Button android:text="." android:id="@+id/dot" style="@style/btnLight" />
         <Button android:text="=" android:id="@+id/equal" style="@style/btnBlue" />
     </LinearLayout>
 
